@@ -4,8 +4,8 @@
 ### Installation
 
 1. Clone repo.
-2. pip install virtualenvwrapper
-3. copy the following into User's .bashrc file:<br>
+2. pip install virtualenvwrapper into Python 3 directory.
+3. copy the following into User's .bashrc file and execute:<br>
 export WORKON_HOME=~/Envs<br>
 mkdir -p $WORKON_HOME<br>
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.4<br>
