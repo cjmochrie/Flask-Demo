@@ -1,9 +1,45 @@
-pip install virtualenvwrapper
-add to .bashrc 
-    export WORKON_HOME=~/Envs
-    mkdir -p $WORKON_HOME
-    export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.4
-    source /usr/local/bin/virtualenvwrapper.sh
+# Flask Demo
+
+
+### Installation
+
+1. Clone repo.
+2. pip install virtualenvwrapper
+3. copy the following into User's .bashrc file:<br>
+export WORKON_HOME=~/Envs<br>
+mkdir -p $WORKON_HOME<br>
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.4<br>
+source /usr/local/bin/virtualenvwrapper.sh<br>
+4. Make a virtual environment for the app $mkvirtualenv demo
+5. Navigate to the project route and $pip install -r requirements.txt
+6. Run tests with $python manage.py test
+7. Run development server with $python manage.py runserver
+
+
+### Application configurations
+- Development
+    - The default configuration. Uses the development database and pretty printed JSON
+    by default.
+    - To enable minified json set the environment variable MINIFY_JAVASCRIPT=true.
+- Testing
+    - Used when testing by default. Uses a testing database that has all tables dropped after every test.
+- Production
+    - A simulated production configuration. Uses the production database and compact JSON.
+    - Enable by setting the environment variable FLASK_CONFIG=production
+ 
+### Database Migrations
+- First initialize the migrations folder: $python manage.py db init
+- Generate the migration script: $python manage.py db migrate
+- After inspecting the generated migration script: $python manage.py db upgrade
+
+### Testing
+- Running tests is straightforward: $python manage.py test
+- To include coverage (with generated html): $python manage.py test --coverage
+
+### Admin Tools
+- Flask-Admin views are available at BASE_URL/admin/group
+- While models can not be created, existing models can be updated and Users added or
+removed from Groups
 
 ## Endpoints
 
@@ -38,35 +74,3 @@ add to .bashrc
     
 #### api/groups/<int:id>/users
     GET - Returns a list of a Group's users.
-
-
-### Installation
-
-1. Clone repo
-
-
-
-### Application configurations
-- Development
-    - The default configuration. Uses the development database and pretty printed JSON
-    by default.
-    - To enable minified json set the environment variable MINIFY_JAVASCRIPT=true.
-- Testing
-    - Used when testing by default. Uses a testing database that has all tables dropped after every test.
-- Production
-    - A simulated production configuration. Uses the production database and compact JSON.
- 
-### Database Migrations
-- First initialize the migrations folder: $python manage.py db init
-- Generate the migration script: $python manage.py db migrate
-- After inspecting the generated migration script: $python manage.py db upgrade
-
-### Testing
-- Running tests is straightforward: $python manage.py test
-- To include coverage (with generated html): $python manage.py test --coverage
-
-### Admin Tools
-- Flask-Admin views are available at BASE_URL/admin/group
-- While models can not be created, existing models can be updated and Users added or
-removed from Groups
-
