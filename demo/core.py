@@ -1,4 +1,4 @@
-# Following the lead of @mattupstate
+# Following the lead of @mattupstate here and with factory.py
 # https://github.com/mattupstate/overholt/blob/master/overholt/core.py
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
