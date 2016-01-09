@@ -1,8 +1,9 @@
 # Flask Demo
 
+### Requirements
+- Python 3
 
 ### Installation
-
 1. Clone repo.
 2. pip install virtualenvwrapper into Python 3 directory.
 3. copy the following into User's .bashrc file and execute:<br>
