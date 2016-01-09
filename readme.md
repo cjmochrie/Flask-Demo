@@ -20,7 +20,7 @@ source /usr/local/bin/virtualenvwrapper.sh<br>
 - Development
     - The default configuration. Uses the development database and pretty printed JSON
     by default.
-    - To enable minified json set the environment variable MINIFY_JAVASCRIPT=true.
+    - To enable minified json set the environment variable MINIFY_JSON=true.
 - Testing
     - Used when testing by default. Uses a testing database that has all tables dropped after every test.
 - Production
