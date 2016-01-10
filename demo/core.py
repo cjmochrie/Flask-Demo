@@ -29,7 +29,7 @@ class Service:
         Raise custom Not Found error if it does not exist"""
         instance = self.get(id)
         if not instance:
-            raise self.error_404()
+            raise self.error_404
         return instance
 
     def all(self, *args):
